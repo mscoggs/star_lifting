@@ -1,0 +1,20 @@
+&star_job
+  create_pre_main_sequence_model = .true.
+  save_model_when_terminate = .true.
+  save_model_filename = 'full.mod'
+/ ! end of star_job namelist
+
+&kap
+  use_Type2_opacities = .true.
+  Zbase = 0.02
+/ ! end of kap namelist
+
+
+&controls
+   initial_mass = 1
+   initial_z = 0.0122
+   xa_central_lower_limit_species(1) = 'h1'
+   xa_central_lower_limit(1) = 1d-10
+   energy_eqn_option = 'dedt'
+   use_gold_tolerances = .true.
+/ ! end of controls namelist
